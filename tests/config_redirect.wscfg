@@ -1,0 +1,25 @@
+server {
+	allow_methods GET;
+	host 127.0.0.1;
+	port 8009;
+	server_name webserv;
+
+	root ./webSite;
+
+	location create {
+		redirect sub/sub2;
+	}
+
+	location sub {
+		allow_methods POST;
+		location sub2 {
+			root sub;
+			index sub2.html;
+		}
+	}
+	location test {
+		root /;
+		index redir.html;
+	}
+
+}

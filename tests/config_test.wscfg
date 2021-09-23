@@ -1,0 +1,23 @@
+server {
+
+	host 127.0.0.1;
+
+	root testSite;
+	port 8081;
+
+	server_name test-toto;
+
+	location /toto/ {
+
+		root /test/titi/tota ;
+
+		extension *.daw {
+
+		}
+	}
+
+	location /test/ {
+		root /toto/;
+	}
+
+}

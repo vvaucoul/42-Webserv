@@ -1,0 +1,31 @@
+server {
+	port 8081;
+	host 127.0.0.1;
+	server_name webserv;
+	root ./webSite;
+
+	location post/ {
+		allow_methods POST;
+		root /;
+		accept_files result;
+
+		extension *.php {
+			cgi_path /Users/vvaucoul/Delivery/webserv/tests/CGI/darwin_phpcgi;
+			client_body_buffer_size 10;
+		}
+
+		location subPost/ {
+			root sub/;
+
+			location result/ {
+				root subPost/;
+				accept_files res;
+
+				extension *.php {
+					cgi_path /Users/vvaucoul/Delivery/webserv/tests/CGI/darwin_phpcgi;
+					client_body_buffer_size 100000;
+				}
+			}
+		}
+	}
+}

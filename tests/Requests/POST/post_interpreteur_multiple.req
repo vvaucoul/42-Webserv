@@ -1,0 +1,8 @@
+POST /post/interpreteur_multiple.php HTTP/1.1
+Host: localhost:8081
+User-Agent: curl/7.68.0
+Content-Length: 10
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+
+value=Norminet&value02=42born2Code

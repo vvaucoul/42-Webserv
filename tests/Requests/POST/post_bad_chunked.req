@@ -1,0 +1,13 @@
+POST /post/ HTTP/1.1
+Host: localhost:8081
+User-Agent: curl/7.68.0
+Transfer-Encoding: chunked
+Accept: */*
+
+4
+42
+3
+born2code
+1t2e3s4t
+42born2Code
+0

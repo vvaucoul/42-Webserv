@@ -1,0 +1,13 @@
+server {
+	host 127.0.0.1;
+	port 8080;
+	server_name webservCGI;
+
+	root ./webSite;
+
+	index cgi_php_test.php;
+	allow_methods GET;
+	error_page 404 error.html;
+
+	cgi_path tests/CGI/linux_phpcgi;
+}

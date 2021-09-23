@@ -1,0 +1,109 @@
+server {
+	port 8081;
+	host 127.0.0.1;
+	server_name webserv;
+	root ./webSite;
+	allow_methods GET;
+	index index.html;
+	error_page 404 error.html;
+	autoindex off;
+
+	location create/ {
+		allow_methods GET;
+		root /;
+		index index.html;
+
+		location sub/ {
+			root create/;
+			index sub.html;
+			error_page 404 error404.html;
+			error_page 405 error405.html;
+		}
+
+		location create03/ {
+			root create02/;
+
+			location create05/ {
+				root create04/;
+				index test.html;
+			}
+		}
+	}
+	location d_entry/ {
+		root /;
+		allow_methods DELETE;
+
+		location delete/ {
+			root d_entry/;
+
+			extension *.tmp {
+				root delete/;
+				allow_methods DELETE;
+			}
+		}
+	}
+	location sub/ {
+		root /;
+		index sub.html;
+		error_page 404 suberror.html;
+	}
+	location jumeau/ {
+		allow_methods GET;
+		index index.html;
+		root /;
+	}
+	location post/ {
+		root /;
+		allow_methods GET POST;
+		accept_files result;
+
+		cgi_path tests/CGI/linux_phpcgi;
+
+		extension *.php {
+			cgi_path tests/CGI/linux_phpcgi;
+		}
+
+	location sub/ {
+		client_body_buffer_size 1000;
+		root post/;
+
+		location subPost/ {
+			client_body_buffer_size 10;
+			root sub/;
+		}
+		}
+	}
+	location php/ {
+		index index.php;
+		root /;
+		cgi_path tests/CGI/darwin_phpcgi;
+		#cgi_path tests/CGI/linux_phpcgi;
+		extension *.php {
+
+			# LINUX
+			cgi_path tests/CGI/linux_phpcgi;
+
+			# MAC
+			#cgi_path tests/CGI/darwin_phpcgi;
+		}
+	}
+	location python/ {
+		allow_methods GET POST;
+		root /;
+		extension *.py {
+			client_body_buffer_size 500;
+			cgi_path /usr/bin/python2.7;
+		}
+	}
+
+	# Redirections 200
+	location redirections/ {
+		root /;
+
+		# Redirections 301 & 308
+		location redirections_3xx/ {
+			root redirections;
+			redirect create/;
+		}
+	}
+}

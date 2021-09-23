@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>webserv</title>
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+	</head>
+
+	<style>
+		body {
+			background-color: #0d0d0d;
+			margin:0 !important;
+		  	padding:0 !important;
+		}
+		body, p {
+			color: white;
+			font-family: sans-serif;
+			text-align: center;
+		}
+		header {
+			margin-top: 0;
+		}
+		header, p, h1{
+			margin:0 ;
+
+			text-transform: uppercase;
+			padding: 5px;
+		}
+		section {
+			text-align: center;
+		}
+
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.buttonGet {background-color: #4CAF50;}
+		.buttonPost {background-color: #008CBA;}
+		.buttonDelete {background-color: #D11919;}
+		.buttonCGI {background-color: #6600ff;}
+		.buttonDefault {background-color: white; color: #0d0d0d;}
+
+		footer {
+		    position: fixed;
+		    height: 50px;
+		    bottom: 0px;
+		    left: 0px;
+		    right: 0px;
+		    margin-bottom: 0px;
+		}
+		footer p {
+			color: #008CBA;
+			font-size: 12px;
+		}
+
+	</style>
+
+	<body>
+
+		<header>
+			<p>
+				<hr>
+					<h1>GET</h1>
+				<hr>
+			</p>
+		</header>
+
+		<section>
+			<h1>HTML</h1>
+			<a href="index.html">
+				<button class="button buttonGet">index.html</button>
+			</a>
+			<a href="game.html">
+				<button class="button buttonGet">game.html</button>
+			</a>
+			<a href="create/index.html">
+				<button class="button buttonGet">create/index.html</button>
+			</a>
+			<a href="create/sub/sub.html">
+				<button class="button buttonGet">create/sub/sub.html</button>
+			</a>
+			<a href="create/create02/create03/create04/create05/test.html">
+				<button class="button buttonGet">.../create04/create05/test.html</button>
+			</a>
+			<a href="jumeau/index.html">
+				<button class="button buttonGet">jumeau/index.html</button>
+			</a>
+
+			<h1>ERRORS</h1>
+
+			<a href="error.html">
+				<button class="button buttonDelete">error.html</button>
+			</a>
+
+			<a href="invalid.html">
+				<button class="button buttonDelete">invalid.html</button>
+			</a>
+
+			<a href="123456789">
+				<button class="button buttonDelete">123456789</button>
+			</a>
+
+			<a href="sub/error">
+				<button class="button buttonDelete">sub/error</button>
+			</a>
+
+			<a href="sub/suberror.html">
+				<button class="button buttonDelete">sub/suberror.html</button>
+			</a>
+
+			<a href="sub/suberror.html">
+				<button class="button buttonDelete">sub/test/nope.html</button>
+			</a>
+
+			<h1>LOCATIONS</h1>
+
+			<a href="/">
+				<button class="button buttonPost">/</button>
+			</a>
+			<a href="sub">
+				<button class="button buttonPost">sub</button>
+			</a>
+			<a href="create">
+				<button class="button buttonPost">create</button>
+			</a>
+			<a href="create/sub/">
+				<button class="button buttonPost">create/sub/</button>
+			</a>
+			<a href="create/sub/../../create/">
+				<button class="button buttonPost">create/sub/../../create/</button>
+			</a>
+
+			<h1>REDIRECTIONS</h1>
+
+			<h3>200</h3>
+
+			<a href="redirections/redirection.html">
+				<button class="button buttonDefault">redirection -> create</button>
+			</a>
+
+			<a href="redirections/redirection2.html">
+				<button class="button buttonDefault">redirection -> sub</button>
+			</a>
+
+			<h3>308</h3>
+
+			<a href="redirections/redirections_3xx">
+				<button class="button buttonDefault">Redirection 3xx -> create/</button>
+			</a>
+
+
+
+			<h1>EXTENSIONS</h1>
+			<a href="php/index.php">
+				<button class="button buttonCGI">CGI *.php (php/index.php)</button>
+			</a>
+
+			<a href="python/test.py">
+				<button class="button buttonCGI">CGI *.py (python/test.py)</button>
+			</a>
+		</section>
+
+		<footer>
+			<p>
+				webserv, 42 project ©vvaucoul & mle-faou
+			</p>
+		</footer>
+
+	</body>
+</html>

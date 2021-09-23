@@ -1,0 +1,12 @@
+server {
+	host 127.0.0.1;
+	port 8081;
+	server_name webserv;
+
+	root ./webSite;
+
+	location create {
+		allow_methods POST;
+		accept_files toto;
+	}
+}

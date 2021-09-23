@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>webserv</title>
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+	background-color: #0d0d0d;
+	margin:0 !important;
+	padding:0 !important;
+}
+body, p {
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+header {
+	margin-top: 0;
+}
+header, p, h1{
+	margin:0 ;
+
+	text-transform: uppercase;
+	padding: 5px;
+}
+section {
+	text-align: center;
+}
+
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+.buttonGet {background-color: #4CAF50;}
+.buttonPost {background-color: #008CBA;}
+.buttonDelete {background-color: #D11919;}
+.buttonCGI {background-color: #6600ff;}
+.buttonDefault {background-color: white; color: #0d0d0d;}
+
+footer {
+	position: fixed;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+}
+footer p {
+	color: #008CBA;
+	font-size: 12px;
+}
+
+.forms {
+	display: block;
+	margin: 0 auto;
+	padding: 0 auto;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.lab, label {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+</style>
+
+<body>
+
+	<header>
+		<p>
+			<hr>
+			<h1>POST</h1>
+			<hr>
+		</p>
+	</header>
+
+	<section>
+
+		<h3>SIMPLE POST</h3>
+
+		<form class="" action="post/" method="POST">
+			<button class="button buttonPost">POST NOTHING</button>
+		</form>
+
+		<form class="" action="post/test.php" method="POST">
+			<button class="button buttonPost">POST NOTHING AS FILE</button>
+		</form>
+
+
+		<h3>SIMPLE INTERPRETEURS</h3>
+
+		<div class="forms">
+			<form class="" action="post/interpreteur.php" method="POST">
+				<label for="value">Value: </label>
+				<input name="value" id="value" value="test" readonly="readonly">
+				<button class="button buttonPost">test [interpreteur.php]</button>
+			</form>
+
+			<form class="" action="post/interpreteur.php" method="POST">
+				<label for="value">Value: </label>
+				<input name="value" id="value" value="42born2code" readonly="readonly">
+				<button class="button buttonPost">42born2code [interpreteur.php]</button>
+			</form>
+		</div>
+		<div class="forms">
+			<form class="" action="post/interpreteur_multiple.php" method="POST">
+				<label for="value">Value: </label>
+				<input name="value" id="value" value="test" readonly="readonly">
+				<label for="value02">Value02: </label>
+				<input name="value02" id="value02" value="42born2code" readonly="readonly">
+				<button class="button buttonPost">MultiValues [interpreteur.php]</button>
+			</form>
+		</div>
+
+		<div class="forms">
+			<form class="" action="python/python_post.py" method="POST">
+				<label for="userlabel">Value: </label>
+				<input name="user" id="user" value="test" readonly="readonly">
+				<button class="button buttonPost">Test Python [interpreteur.py]</button>
+			</form>
+		</div>
+
+		<h3>FORMULAIRE HTML</h3>
+
+		<fieldset>
+			<legend>FORMULAIRE</legend>
+			<div class="forms">
+				<form class="" action="post/formPost.php" method="POST">
+					<div class="lab">
+
+						<label for="FirstName">FirstName: </label>
+						<input name="FirstName" id="FirstName" value="">
+
+						<br>
+
+						<label for="LastName">LastName: </label>
+						<input name="LastName" id="LastName" value="">
+
+						<br>
+
+						<label for="DisplayName">DisplayName: </label>
+						<input name="DisplayName" id="DisplayName" value="">
+					</div>
+
+					<br>
+
+					<label for="Email">Email: </label>
+					<input name="Email" id="Email" value="">
+				</div>
+
+				<br>
+
+				<button class="button buttonGet">Confirm Inscription</button>
+					</form>
+
+			</fieldset>
+
+			<h3>UPLOAD TEXT</h3>
+
+			<form action="post/" method="POST" enctype="multipart/form-data">
+				Select text file to upload:
+				<input type="file" name="fileToUpload" id="fileToUpload">
+				<input type="submit" value="submit" name="submit">
+			</form>
+
+			<h3>UPLOAD IMAGE</h3>
+
+			<form action="post/images/" method="POST" enctype="multipart/form-data">
+				<fieldset>
+					<legend>IMAGE</legend>
+					Select image file to upload:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" value="submit" name="submit">
+				</fieldset>
+			</form>
+
+
+	</section>
+
+		<footer>
+			<p>
+				webserv, 42 project ©vvaucoul & mle-faou
+			</p>
+		</footer>
+
+
+
+	</body>
+	</html>

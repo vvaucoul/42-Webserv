@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>webserv</title>
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+	</head>
+
+	<style>
+		body {
+			background-color: #0d0d0d;
+			margin:0 !important;
+		  	padding:0 !important;
+		}
+		body, p {
+			color: white;
+			font-family: sans-serif;
+			text-align: center;
+		}
+		header {
+			margin-top: 0;
+		}
+		header, p, h1{
+			margin:0 ;
+
+			text-transform: uppercase;
+			padding: 5px;
+		}
+		section {
+			text-align: center;
+		}
+
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.buttonGet {background-color: #4CAF50;}
+		.buttonPost {background-color: #008CBA;}
+		.buttonDelete {background-color: #D11919;}
+		.buttonCGI {background-color: #6600ff;}
+		.buttonDefault {background-color: white; color: #0d0d0d;}
+
+		footer {
+		    position: fixed;
+		    height: 50px;
+		    bottom: 0px;
+		    left: 0px;
+		    right: 0px;
+		    margin-bottom: 0px;
+		}
+		footer p {
+			color: #008CBA;
+			font-size: 12px;
+		}
+
+	</style>
+
+	<body>
+
+		<header>
+			<p>
+				<hr>
+					<h1>webserv</h1>
+				<hr>
+			</p>
+		</header>
+
+		<section>
+			<h3>TEST - Methods</h3>
+
+			<a href="methodGet.html">
+				<button class="button buttonGet">Get</button>
+			</a>
+			<a href="methodPost.html">
+				<button class="button buttonPost">Post</button>
+			</a>
+			<a href="methodDelete.html">
+				<button class="button buttonDelete">Delete</button>
+			</a>
+
+			<!--
+
+			<a href="#">
+				<button class="button buttonCGI">CGI</button>
+			</a>
+			
+			 -->
+		</section>
+
+		<footer>
+			<p>
+				webserv, 42 project ©vvaucoul & mle-faou
+			</p>
+		</footer>
+
+
+
+	</body>
+</html>

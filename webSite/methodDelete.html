@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>webserv</title>
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+	</head>
+
+	<style>
+		body {
+			background-color: #0d0d0d;
+			margin:0 !important;
+		  	padding:0 !important;
+		}
+		body, p {
+			color: white;
+			font-family: sans-serif;
+			text-align: center;
+		}
+		header {
+			margin-top: 0;
+		}
+		header, p, h1{
+			margin:0 ;
+
+			text-transform: uppercase;
+			padding: 5px;
+		}
+		section {
+			text-align: center;
+		}
+
+		.button {
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.buttonGet {background-color: #4CAF50;}
+		.buttonPost {background-color: #008CBA;}
+		.buttonDelete {background-color: #D11919;}
+		.buttonCGI {background-color: #6600ff;}
+		.buttonDefault {background-color: white; color: #0d0d0d;}
+
+		footer {
+		    position: fixed;
+		    height: 50px;
+		    bottom: 0px;
+		    left: 0px;
+		    right: 0px;
+		    margin-bottom: 0px;
+		}
+		footer p {
+			color: #008CBA;
+			font-size: 12px;
+		}
+
+		ul {
+			text-align: left;
+		}
+		ul {
+			list-style: none;
+		}
+		ul {
+			padding-left: 2rem;
+			list-style-type: none;
+		}
+
+		ul li {
+			padding-left: 2rem;
+			background-position: 0 0;
+			background-size: 1.6rem 1.6rem;
+			background-repeat: no-repeat;
+			font-weight: lighter;
+			padding-top: 6px;
+			font-size: 18px;
+		}
+
+
+	</style>
+
+	<body>
+
+		<header>
+			<p>
+				<hr>
+					<h1>DELETE</h1>
+				<hr>
+			</p>
+		</header>
+
+		<section>
+			<h1>Delete files</h1>
+
+			<p>
+				<ul>
+					<li>$ curl -X DELETE -i "127.0.0.1:8081/d_entry/1" </li>
+					<li>$ curl -X DELETE -i "127.0.0.1:8081/d_entry/delete/2" </li>
+					<li>$ curl -X DELETE -i "127.0.0.1:8081/d_entry/delete/" </li>
+					<li>$ curl -X DELETE -i "127.0.0.1:8081/d_entry/delete/to_delete.tmp" </li>
+					<li>$ curl -X DELETE -i "127.0.0.1:8081/d_entry/delete/toto" </li>
+				</ul>
+			</p>
+
+		</section>
+
+		<footer>
+			<p>
+				webserv, 42 project ©vvaucoul & mle-faou
+			</p>
+		</footer>
+
+
+
+	</body>
+</html>

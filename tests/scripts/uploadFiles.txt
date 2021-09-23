@@ -1,0 +1,3 @@
+curl -F ‘data=@path/to/local/file’ UPLOAD_ADDRESS
+
+path_to_file need to be absolute !

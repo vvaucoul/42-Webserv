@@ -1,0 +1,18 @@
+server {
+	host 127.0.0.1;
+	port 8081;
+	server_name webserv;
+
+	root ./webSite;
+
+	location create {
+		location sub {
+			error_page 404 error404.html;
+		}
+	}
+
+	error_page 200 error.html;
+	error_page 230 error.html;
+	error_page 241 error.html;
+
+}

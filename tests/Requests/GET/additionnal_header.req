@@ -1,0 +1,7 @@
+GET / HTTP/1.1
+Host: localhost:8081
+User-Agent: curl/7.68.0
+Test: toto
+cookie_manger: 6f7gsdf678s89fsdfg7s687
+Test2: test3
+Accept: */*
