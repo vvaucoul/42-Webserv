@@ -76,6 +76,9 @@ Default: [**config_default.wscfg**](https://github.com/vvaucoul/Webserv/blob/mai
 Simple-Linux: [**config_simple_linux.wscfg**](https://github.com/vvaucoul/Webserv/blob/main/tests/config_simple_linux.wscfg)<br>
 Locations: [**config_locations.wscfg**](https://github.com/vvaucoul/Webserv/blob/main/tests/config_locations.wscfg)<br>
 
+## Example
+
+![Animation](https://user-images.githubusercontent.com/66129673/198697847-f7959b88-5603-4799-9ff4-c83d71112697.gif)
 
 ## Ressources
 
