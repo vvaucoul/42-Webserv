@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   NewLocations.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 21:12:09 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/09/20 12:53:44 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/10/28 19:08:26 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void NewLocations::createLocations() {
 	std::cout << "\n";
 
 	locationCreated = ::createLocations(_locations[0].next);
+	(void)locationCreated;
 }
 std::string NewLocations::fixSearchPathName(std::string const &requestPage) {
 	std::string nstr;

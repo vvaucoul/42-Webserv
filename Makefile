@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mle-faou <mle-faou@student.42.fr>          +#+  +:+       +#+         #
+#    By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/17 10:12:54 by mle-faou          #+#    #+#              #
-#    Updated: 2021/09/20 12:41:42 by vvaucoul         ###   ########.fr        #
+#    Updated: 2022/10/28 19:09:16 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ CXX				=	clang++
 PRINT_COMP		=	printf "\r- [$(_BOLD)$(_YELLOW)%s]" $@
 
 %.o : %.cpp
-	@echo -n "\r                                                               "
+	@printf "\r                                                               "
 	@$(PRINT_COMP) Compiling $@
 	@$(CXX) $(CFLAGS) -I. -c $< -o ${<:.cpp=.o}
 
@@ -90,31 +90,31 @@ _IWHITE=$'\033[47m
 ################################################################################
 
 all:
-	@echo "$(_BOLD)$(_GREEN):::       ::: :::::::::: :::::::::   ::::::::  :::::::::: :::::::::  :::     :::"
-	@echo ":+:       :+: :+:        :+:    :+: :+:    :+: :+:        :+:    :+: :+:     :+:"
-	@echo "+:+       +:+ +:+        +:+    +:+ +:+        +:+        +:+    +:+ +:+     +:+"
-	@echo "+#+  +:+  +#+ +#++:++#   +#++:++#+  +#++:++#++ +#++:++#   +#++:++#:  +#+     +:+"
-	@echo "+#+ +#+#+ +#+ +#+        +#+    +#+        +#+ +#+        +#+    +#+  +#+   +#+ "
-	@echo " #+#+# #+#+#  #+#        #+#    #+# #+#    #+# #+#        #+#    #+#   #+#+#+#  "
-	@echo "  ###   ###   ########## #########   ########  ########## ###    ###     ###    $(_END)"
-	@echo "$(_PURPLE)Compiling $(NAME) . . . $(_END)"
+	@printf "$(_BOLD)$(_GREEN):::       ::: :::::::::: :::::::::   ::::::::  :::::::::: :::::::::  :::     :::\n"
+	@printf ":+:       :+: :+:        :+:    :+: :+:    :+: :+:        :+:    :+: :+:     :+:\n"
+	@printf "+:+       +:+ +:+        +:+    +:+ +:+        +:+        +:+    +:+ +:+     +:+\n"
+	@printf "+#+  +:+  +#+ +#++:++#   +#++:++#+  +#++:++#++ +#++:++#   +#++:++#:  +#+     +:+\n"
+	@printf "+#+ +#+#+ +#+ +#+        +#+    +#+        +#+ +#+        +#+    +#+  +#+   +#+ \n"
+	@printf " #+#+# #+#+#  #+#        #+#    #+# #+#    #+# #+#        #+#    #+#   #+#+#+#  \n"
+	@printf "  ###   ###   ########## #########   ########  ########## ###    ###     ###    $(_END)\n"
+	@printf "$(_PURPLE)Compiling $(NAME) . . . $(_END)\n"
 	@make $(NAME)
 
 $(NAME): $(OBJS)
-	@echo -n "\r                                                               "
-	@echo "\r$(_BOLD)$(_GREEN)Everything has been compiled correctly !"
+	@printf "\r                                                               "
+	@printf "\r$(_BOLD)$(_GREEN)Everything has been compiled correctly !\n"
 	@$(CXX) $(OBJS) $(CFLAGS) -o $(NAME)
-	@echo "$(_BOLD)$(_GREEN)   ___                  __"
-	@echo "  / _ \___  ___  ___   / /"
-	@echo " / // / _ \/ _ \/ -_) /_/"
-	@echo "/____/\___/_//_/\__/ (_)$(_END)"
+	@printf "$(_BOLD)$(_GREEN)   ___                  __\n"
+	@printf "  / _ \___  ___  ___   / /\n"
+	@printf " / // / _ \/ _ \/ -_) /_/\n"
+	@printf "/____/\___/_//_/\__/ (_)$(_END)\n"
 
 clean:
-	@echo "$(_PURPLE)Deleting pre-compilation files for $(NAME) . . . $(_END)"
+	@printf "$(_PURPLE)Deleting pre-compilation files for $(NAME) . . . $(_END)\n"
 	@/bin/rm -f $(OBJS)
 
 fclean: clean
-	@echo "$(_PURPLE)Deleting executable for $(NAME) . . . $(_END)"
+	@printf "$(_PURPLE)Deleting executable for $(NAME) . . . $(_END)\n"
 	@/bin/rm -f Client
 	@/bin/rm -f $(NAME)
 

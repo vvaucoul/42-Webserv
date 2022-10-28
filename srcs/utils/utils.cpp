@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 17:40:37 by vvaucoul          #+#    #+#             */
-/*   Updated: 2021/09/20 13:29:47 by vvaucoul         ###   ########.fr       */
+/*   Updated: 2022/10/28 19:07:49 by vvaucoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,15 +179,10 @@ std::string	getFileExtension(std::string const &file) {
 }
 int stoi_base(std::string const &str, size_t const base) {
 	std::string refB = "0123456789abcdef";
-	bool isNeg;
 	int nb, i;
 	std::string nbBase;
 
 	nb = atoi(str.c_str());
-	if (nb < 0)
-		isNeg = true;
-	else
-		isNeg = false;
 	i = 0;
 	while (nb) {
 		nbBase += refB[nb % base];
